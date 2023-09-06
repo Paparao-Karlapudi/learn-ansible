@@ -20,6 +20,15 @@
      ansible.builtin.debug:
        msg: URL == {{URL}}
 
+- name: Access a Fact Variable
+  hosts: all
+  connection: local
+  tasks:
+    - name: Access fact variable
+      ansible.builtin.debug:
+        msg: Ansible hostname is == {{ansible_fqdn}}
+
+
 
 
 - name: Declare variable at Task level
