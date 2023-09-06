@@ -1,7 +1,7 @@
 - name: roles variable
   ansible.builtin.debug:
-    msg: "Variable from Roles"
+    msg: "This message accessed from Roles"
 
-- name: Varibale from roles
+- name: Varibale declared in roles
   ansible.builtin.debug:
     msg: URl == {{URL}}
