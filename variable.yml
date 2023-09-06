@@ -41,3 +41,15 @@
         msg: URL == {{URL}}
       vars:
         URL: Tasklevel.example.com
+
+- name: Store an output of a task as variable
+  hosts: all
+  connection: local
+  tasks:
+    - name: Run a shell command
+      ansible.builtin.shell: uptime
+      register: out #this is a variable that the output of 'ansible.builtin.shell: uptime' is stored
+    - name: print the output stored in variable
+      ansible.builtin.debug:
+        msg: "{{out}}"
+
