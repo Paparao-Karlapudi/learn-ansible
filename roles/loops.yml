@@ -1,0 +1,9 @@
+- name: learn loops
+  hosts: all
+  tasks:
+  - name: print fruit names
+    debug:
+      msg: fruit name is {{ item }}
+    loop:
+      - apple
+      - banana
