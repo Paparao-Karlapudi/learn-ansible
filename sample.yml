@@ -7,4 +7,4 @@
 
    - name: Print hai
      ansible.builtin.debug:
-      msg: hi
+      msg: hi hello
