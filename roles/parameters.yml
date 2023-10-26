@@ -3,4 +3,4 @@
   connection: local
   tasks:
     - debug:
-       msg: "{{ lookup('aws_ssm', 'sonarqube.user', region='us-east-1' ) }}"
+       msg: "{{ lookup('amazon.aws.aws_ssm', 'sonarqube.user', region='us-east-1' ) }}"
