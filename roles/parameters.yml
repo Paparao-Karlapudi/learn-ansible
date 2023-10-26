@@ -1,0 +1,6 @@
+- name: lookup ssm parameter store in My AWS Parameters store
+  hosts: localhost
+  connection: local
+  tasks:
+    - debug:
+       msg: "{{ lookup('amazon.aws.aws_ssm', 'sonarqube.user', region='us-east-1' ) }}"
